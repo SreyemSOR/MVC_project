@@ -1,10 +1,18 @@
+<form method='post' action="../user/view.php">
+            <input type="submit" value="manage" name="Manage User" class=" pull-right btn btn-success">
+    </form>
 
+<form method='post' action="index.php?action=logout">
+            <input type="submit" value="Logout" name="but_logout" class="btn btn-danger">
+    </form>
+   
 <div id="users">
 <div class="col-md-12">
+
     <div class="pull-left">
         <input class="search" placeholder="Search" />
     </div>
-
+    
     <div class="pull-right">
         <a href="index.php?action=add"><i class="glyphicon glyphicon-plus-sign" style="font-size:20px;"></i></a> &nbsp;
     </div>
@@ -41,10 +49,10 @@
                  <td class="text-center perk"><?php echo $row['perks'];?></td>
                  <td class="text-center email"><?php echo $row['email'];?></td>
                  <td class="text-center depart"><?php echo $row['departmentid'];?></td>
-                 <td class="text-center">
-                 <a href="index.php?action=view&id=<?php echo $row['id'];?> "><i class="glyphicon glyphicon-eye-open" style="color:green;"></i></a> &nbsp;
-                 <a href="index.php?action=update&id=<?php echo $row['id'];?>"><i class="glyphicon glyphicon-edit" style="color:blue;"></i></a>&nbsp;
-                 <a href="index.php?action=delete&id=<?php echo $row['id'];?>"><i class="glyphicon glyphicon-trash" style="color:red;"></i></a> 
+                 <td class="text-center" >
+                 <a href="index.php?action=view&id=<?php echo $row['id'];?> "><i class="glyphicon glyphicon-eye-open" style="color:green;margin-right:89px; "></i></a> &nbsp;
+                 <a href="index.php?action=edit&id=<?php echo $row['id'];?>"><i class="glyphicon glyphicon-edit" style="color:blue; margin-right:12px;"></i></a>&nbsp;
+                 <a href="index.php?action=delete&id=<?php echo $row['id'];?>"><i class="glyphicon glyphicon-trash" style="color:red; margin-right:23px; "></i></a> 
                  </td>
             </tr>
              <?php 
@@ -61,6 +69,7 @@
 
     </table>
 </form>
+
 </div>
 
 <script>

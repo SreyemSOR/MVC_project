@@ -1,6 +1,7 @@
 <?php
-session_start();
-include('model/m_employee.php');
-include('controller/c_employee.php');
+
+include('model/m_user.php');
+include('controller/c_user.php');
 include('view/template.php');
+
 ?>
